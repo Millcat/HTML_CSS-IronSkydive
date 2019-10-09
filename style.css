@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
+/* How to organise all my classes ??? by name, by order in the HTML file ??? */
 
 * {
     margin: 0;
@@ -67,6 +68,8 @@ text: rgb(0, 0, 0)
 .nav-bar-ul {
     width: 1200px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .nav-bar-ul li {
@@ -81,10 +84,29 @@ text: rgb(0, 0, 0)
     background-size: cover;
     height: 650px;
     padding-top: 50px;
+    position: relative;
 }
+/* Something's wrong with the resolution of my screen
+or is it a wrong setting of my website ?
+The skydiver on the picture is not that close of the title in the example...*/
 
 .quote {
-    font-size: 2.5em; /* why the size is so big compare to the final picture ?*/
+    font-size: 2.5em;
+    position: absolute;
+    left: 10%;
+    bottom: 100px;
+}
+
+#general-information {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#general-information .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 370px;
 }
 
 .dark-background {
@@ -108,6 +130,15 @@ text: rgb(0, 0, 0)
     letter-spacing: 0.5px;
     text-align: center;
     text-decoration: none;
+    padding: 10px 30px;
+}
+
+#structure > div { /* the "<" targets just direct divs that are children of section with id structure.
+    but....there is just 1 <div> in this section anyway....right? */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .service-box {
@@ -156,11 +187,31 @@ text: rgb(0, 0, 0)
     height: 180px;
 }
 
+#team > div { /* target just the direct children of the element with id #team  */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#team > div > article { /* again...it's to target just <article> and not <h4> and <img> who are inside <article> ? */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .footer {
     text-align: center;
     font-size: 1.9em;
     padding: 40px 100px;
     margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.map-frame {
+    height: 375px;
+    width: 60%;
 }
 
 .adress {
