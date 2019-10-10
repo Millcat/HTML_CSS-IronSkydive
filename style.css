@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
-/* How to organise all my classes ??? by name, by order in the HTML file ??? */
 
 * {
     margin: 0;
@@ -86,9 +85,6 @@ text: rgb(0, 0, 0)
     padding-top: 50px;
     position: relative;
 }
-/* Something's wrong with the resolution of my screen
-or is it a wrong setting of my website ?
-The skydiver on the picture is not that close of the title in the example...*/
 
 .quote {
     font-size: 2.5em;
@@ -133,8 +129,7 @@ The skydiver on the picture is not that close of the title in the example...*/
     padding: 10px 30px;
 }
 
-#structure > div { /* the "<" targets just direct divs that are children of section with id structure.
-    but....there is just 1 <div> in this section anyway....right? */
+#structure > div {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -187,12 +182,12 @@ The skydiver on the picture is not that close of the title in the example...*/
     height: 180px;
 }
 
-#team > div { /* target just the direct children of the element with id #team  */
+#team > div {
     display: flex;
     justify-content: space-evenly;
 }
 
-#team > div > article { /* again...it's to target just <article> and not <h4> and <img> who are inside <article> ? */
+#team > div > article {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -246,12 +241,31 @@ The skydiver on the picture is not that close of the title in the example...*/
     text-align: center;
 }
 
+.slot-form-container {
+    width: 40%;
+    margin: 18px auto 0 auto;
+    font-size: 1.5em;
+    text-align: center;
+}
 
+.slot-form-container label {
+    line-height: 15px;
+    margin: 5px;
+}
 
-/* Section 2:
-"This section has to have the same width as the previous.
-The difference between this one and the previous is
-  that section 2 doesn’t have a background color.
-It means we can apply the container class directly to the section."
-==> I didn't understand...
-*/
+.slot-form-container input, select {
+    /* ==> is this the right syntax ?
+    "let’s target all input and select elements inside the slot-form-container" */
+    height: 20px;
+    outline: none;
+    padding: 3px;
+    width: 100%;
+}
+
+.slot-form-container button {
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    padding: 9px;
+    margin-top: 15px;
+}
